@@ -1,0 +1,141 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red27\green31\blue34;}
+{\*\expandedcolortbl;;\cssrgb\c14118\c16078\c18039;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww17820\viewh14660\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+October 9th 2017 \
+\
+Solo Project:  Scheduling Database and website for Missoula Softball Association \
+\
+Objective of Project: \
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\'95	}Display the location and game schedules for all leagues that can be linked by team name, date, location, and team members\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\'95	}Have a website for posting and finding teams to play in and for subs - have that linked to the team/schedule - if a team needs a sub then then it can be displayed on the website  \
+{\listtext	\'95	}Be able to see the team stats \
+{\listtext	\'95	}Notification Bar \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf0 {\listtext	\'95	}Tournament bracket posting and scheduling \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls4\ilvl0\cf0 {\listtext	\'95	}Umpire Scheduling application \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+What needs to be accomplished? \
+\
+Home Page: \
+	Login/Signup buttons\
+	Link to view schedule only (no subs) without member information\
+\
+		Username/password:\
+		Model Schema: \
+			userName(text)\
+			userPassword(text)\
+			userFirstName(text)\
+			userLastName(text)\
+			userPrivilege(text)\
+			userTeamNameOID (array) \
+	Notification Bar:\
+	Model Schema:\
+		notificationUserNameOID:\
+		notificationText(text):\
+		notificationExpires(Date):\
+	\
+			\
+Schedule Page: \
+	Game Schedule:\
+	Model Schema: \
+		gameTime(date/time)\
+		gameFieldOID(text)\
+		gameTeamName1OID(text)\
+		gameTeamName2OID(text)\
+		gameStatus(text or boolean)\
+\
+Team:\
+	Model Schema:\
+		teamName(text)\
+		teamLeagueOID(text)\
+		teamOwnerUserNameOID(array)\
+		teamMemberUserNameOID(array)\
+	\
+\
+\
+\
+	Drop down buttons that filter by: \
+	\
+	gameTime:\
+	gameFieldOID:\
+	teamNameOID:\
+	teamLeagueOID:\
+	*userNameOID:\
+\
+\
+\
+\
+\
+Sub Posting Page:\
+\
+SubRequest \
+	Model schema: \
+	\
+		subRequestUserNameOID(text)\
+		subRequestTeamNameOID(text)	\
+		subRequestGameOID(text)\
+		subRequestNumMen(integer)\
+		subRequestNumWomen(integer)		\
+\
+ \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\
+Installed create react app and did a build in the msa-app folder \
+\
+\
+\
+Current file directory : \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 msa/\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 msa-app/\
+\pard\pardeftab720\sl380\partightenfactor0
+\cf2   README.md\
+  node_modules/\
+  package.json\
+
+\b   public/	(only files inside this folder can be used with public/index.html)
+\b0 \
+   
+\b  index.html 	(required for build)
+\b0 \
+    favicon.ico\
+  
+\b src/		(all .js and .css files must be located inside of this folder)
+\b0 \
+    App.css\
+    App.js\
+    App.test.js\
+    index.css\
+   
+\b  index.js		(required for build)
+\b0 \
+    logo.svg\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+ \
+\
+}

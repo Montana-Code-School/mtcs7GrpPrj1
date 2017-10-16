@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #[em MissoulaSoftballAssociation], This basic bitch of a website is going to change the world
+
+  h1 Missoula Softball Association Statistics
+
+  if error
+    p Um, Something fucked up.
+  else
+    p Members:
+
+    ul
+      li #[strong Current Membership Count:] !{data.msaUser_count}
+      li #[strong Current Administrator Count:] !{data.msaUser_MsaAdminPriv_count}
+      li #[strong Current Publisher Count:] !{data.msaUser_MsaPublisherPriv_count}
+      li #[strong Current User Count:] !{data.msaUser_MsaUserPriv_count}
